@@ -2,8 +2,7 @@ name: Java CI with Maven and Run
 
 # מגדיר מתי זרימת העבודה תופעל - במקרה זה, בכל Push לענף main
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 # מגדיר את המשימות (Jobs) שיתבצעו
 jobs:
