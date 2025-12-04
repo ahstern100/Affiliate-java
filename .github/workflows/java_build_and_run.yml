@@ -28,15 +28,13 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    # 4. הרצה: מריץ את קוד הג'אווה שלך (החלון הראשי)
-    # הערה: שלב זה ירוץ בהנחה שאתה מריץ פקודה פשוטה או JAR שנוצר
-    - name: Run Main Class
+
+    # 4. הרצה: מריץ את קוד הג'אווה שלך באמצעות Maven
+    - name: Run Main Class via Maven
       run: |
-        echo "Running the Java main class..."
-        # הפקודה הבאה מריצה את הקלאס הראשי שיצרנו בסעיף 2.
-        # הקובץ pom.xml אינו מכיל פלאגין להרצת JAR, אז נשתמש בקומפילציה ישירה.
-        javac src/main/java/MainApp.java
-        java src/main/java/MainApp
+        echo "Running the Java main class with Maven..."
+        # הפקודה הבאה משתמשת בפלאגין Exec של Maven כדי להריץ מחלקה ספציפית
+        mvn exec:java -Dexec.mainClass="com.example.myproject.MainApp"
 
     # (אופציונלי) אם אתה בונה קובץ JAR:
     # - name: Execute JAR file
