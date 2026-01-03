@@ -12,7 +12,20 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>local-project-repo</id>
+            <url>file://${project.basedir}/repo</url>
+        </repository>
+    </repositories>
+
+
     <dependencies>
+        <dependency>
+            <groupId>com.aliexpress</groupId>
+            <artifactId>aliexpress-sdk</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
