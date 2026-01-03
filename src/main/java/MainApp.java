@@ -1,4 +1,4 @@
-package com.example.myproject;
+
 
 // ייבוא מחלקות הלוגים הדרושות
 import org.slf4j.Logger;
@@ -22,6 +22,6 @@ public class MainApp {
         logger.error("שגיאה קריטית: משהו השתבש, זה יופיע בוודאות.");
         
         // עדיין אפשר להשתמש ב-System.out.println, אך מומלץ להשתמש ב-logger
-        System.out.println("זה פלט רגיל של System.out, יופיע בלוג ללא פורמט הלוגר.");
+        System.out.println("זה   פלט רגיל של System.out, יופיע בלוג ללא פורמט הלוגר.");
     }
 }
